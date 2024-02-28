@@ -51,6 +51,7 @@
                             <constraint firstItem="LA6-BK-Sfr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hbL-or-HlY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="MkN-AE-rcx"/>
                     <connections>
                         <outlet property="label" destination="LA6-BK-Sfr" id="2b6-uq-Ocs"/>
                         <outlet property="slider" destination="D8h-AD-VO3" id="hkl-5D-cIG"/>
@@ -58,17 +59,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="-34"/>
+            <point key="canvasLocation" x="84" y="-1116"/>
         </scene>
     </scenes>
     <resources>
         <image name="01.square.fill" catalog="system" width="128" height="114"/>
         <image name="50.square.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
