@@ -12,37 +12,23 @@ class ViewController: UIViewController {
     @IBOutlet var slider:UISlider!
     @IBOutlet var label: UILabel!
     
-    private var number:Int = 0
-    private var round:Int = 1
-    private var points:Int = 0
-    
-
+    private var game:Game!
     
     
 
     override func loadView() {
         super.loadView()
-        
-        //let versionlabel = UILabel(frame: CGRect(x: 20, y: 10, width: 200, height: 20))
-        //versionlabel.text = "Версия 1.1"
-        //view.addSubview(versionlabel)
-        
         print("Load View")
     }
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print("viewDdidLoad")
-        
-        number = Int.random(in: 1...50)
-        label.text = String(number)
+        game = Game(startValue: 1, endValue: 50, rounds: 5)
+        updateLabelWithSecretNumber(newText: String (game.currentSecretValue))
         
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -66,40 +52,31 @@ class ViewController: UIViewController {
     }
     
     
-    
     @IBAction func checkNumber(){
         
-            let numSlider = Int(slider.value.rounded())
-            
-            if numSlider > number {
-                points += 50 - numSlider + number
-            } else if numSlider < number {
-                points += 50 - number + numSlider
-            } else if numSlider == number {
-                points += 50
-            }
-            
-            if round == 5 {
-                let alert = UIAlertController (
-                    title: "Игра окончена", message: "Вы заработали \( points) очков", preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "Начать заново", style:  .default, handler: nil))
-                present(alert,animated: true,completion: nil)
-                round = 1
-                points = 0
-            } else {
-            
-                round+=1
-            }
-            
+        let numSlider = Int(slider.value.rounded())
+        game.calculateScore(with: numSlider)
         
-        number = Int.random(in: 1...50)
-        label.text = String(number)
+        if game.isGameEnded {
+            showAlertWith(score: game.score)
+            game.restartGame()
+        } else {
+            game.startNewRound()
+        }
         
-        
+        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
     }
     
+    private func updateLabelWithSecretNumber(newText:String){
+        label.text = newText
+    }
     
-    
+    private func showAlertWith(score:Int){
+        let alert = UIAlertController (
+            title: "Игра окончена", message: "Вы заработали \( score) очков", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Начать заново", style:  .default, handler: nil))
+        present(alert,animated: true,completion: nil)
+        
+    }
 }
 

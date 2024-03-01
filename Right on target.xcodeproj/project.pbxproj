@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		63944D3F2B8F548B0065AE8E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63944D3E2B8F548B0065AE8E /* SecondViewController.swift */; };
+		63C0B3872B90618600FA858B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C0B3862B90618600FA858B /* Game.swift */; };
 		73F313C42B8C6B13000247FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F313C32B8C6B13000247FF /* AppDelegate.swift */; };
 		73F313C62B8C6B13000247FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F313C52B8C6B13000247FF /* SceneDelegate.swift */; };
 		73F313C82B8C6B13000247FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F313C72B8C6B13000247FF /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		63944D3E2B8F548B0065AE8E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		63C0B3862B90618600FA858B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		73F313C02B8C6B13000247FF /* Right on target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Right on target.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F313C32B8C6B13000247FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73F313C52B8C6B13000247FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63C0B3852B90612E00FA858B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63C0B3862B90618600FA858B /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		73F313B72B8C6B13000247FF = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		73F313C22B8C6B13000247FF /* Right on target */ = {
 			isa = PBXGroup;
 			children = (
+				63C0B3852B90612E00FA858B /* Model */,
 				73F313C32B8C6B13000247FF /* AppDelegate.swift */,
 				73F313C52B8C6B13000247FF /* SceneDelegate.swift */,
 				73F313C72B8C6B13000247FF /* ViewController.swift */,
@@ -142,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63944D3F2B8F548B0065AE8E /* SecondViewController.swift in Sources */,
+				63C0B3872B90618600FA858B /* Game.swift in Sources */,
 				73F313C82B8C6B13000247FF /* ViewController.swift in Sources */,
 				73F313C42B8C6B13000247FF /* AppDelegate.swift in Sources */,
 				73F313C62B8C6B13000247FF /* SceneDelegate.swift in Sources */,
@@ -307,7 +319,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.swiftme.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -334,7 +346,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.swiftme.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
